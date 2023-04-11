@@ -51,16 +51,16 @@ services:
 #     sync: false
 #   - key: LINE_CHANNEL_SECRET
 #     sync: false
-# - type: web
-#   name: line-bot-python-aiohttp
-#   env: python
-#   repo: https://github.com/line/line-bot-sdk-python.git
-#   buildCommand: cd examples/aiohttp-echo;pip install -r requirements.txt
-#   startCommand: cd examples/aiohttp-echo;python app.py
-#   plan: free
-#   autoDeploy: false
-#   envVars:
-#   - key: LINE_CHANNEL_ACCESS_TOKEN
-#     sync: false
-#   - key: LINE_CHANNEL_SECRET
-#     sync: false
+- type: web
+   name: line-bot-python-aiohttp
+   env: python
+   repo: https://github.com/MajorTom25807726/linebot.git
+   buildCommand: pip install -r requirements.txt
+   startCommand: python app.py
+   plan: free
+   autoDeploy: false
+   envVars:
+   - key: LINE_CHANNEL_ACCESS_TOKEN
+     sync: false
+   - key: LINE_CHANNEL_SECRET
+     sync: false
